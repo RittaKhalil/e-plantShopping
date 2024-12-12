@@ -11,12 +11,10 @@ function ProductList() {
     const [showPlants, setShowPlants] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
 
-    // 计算购物车中的总商品数量
     const calculateTotalCartItems = () => {
         return cartItems.reduce((total, item) => total + item.quantity, 0);
     };
 
-    // 处理添加到购物车
     const handleAddToCart = (plant) => {
         dispatch(addItem(plant));
         setAddedToCart(prevState => ({
@@ -274,12 +272,12 @@ function ProductList() {
                 <ul style={styleObjUl}>
                     <li>
                         <a href="/" style={styleA} onClick={handlePlantsClick}>
-                            植物商店
+                            PLANT
                         </a>
                     </li>
                     <li>
                         <a href="/cart" style={styleA} onClick={handleCartClick}>
-                            购物车 ({calculateTotalCartItems()})
+                           tOTAL ({calculateTotalCartItems()})
                         </a>
                     </li>
                 </ul>
